@@ -8,29 +8,30 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = #FIXME
+PROGRAM = #FIXME1
 
 # list .cpp files separated by space
-CPPFILES = #FIXME
+CPPFILES = #FIXME2
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
 # then make a single binary/executable program
-all:
+build:
 	$(CXX) $(CXXFLAGS) $(CPPFILES)
 	$(CXX) -o $(PROGRAM) *.o
 
 # make clean rule
 # delete object and binary files
 clean:
-	rm -f $(PROGRAM) *.o
+	@rm -f $(PROGRAM) *.o
 
-# FIXME
-# add a rule to run the program
+# FIXME3 - add rule to run unittest functions
 
-# FIXME - add 4 more commands to test the 4 input files
+# FIXME4 - add 4 more commands to test the 4 input files
 test:
 	cat 1.in | ./$(PROGRAM) | diff - 1.ans
-	cat 2.in | ./$(PROGRAM) | diff - 2.ans
 	@#FIXME - Add commands to test 4 more input files
 	@echo "All test cases passed!"
+
+all: build test clean
+	@echo "All done!"

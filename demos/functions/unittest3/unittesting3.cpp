@@ -1,5 +1,5 @@
 // unittesting void functions and floating point results
-// void functions that exposes results from reference parameters
+// void function that writes result to a reference parameter
 // NOTE - floating point computation may not be precisely accurate!
 // Run the program as it is (test fails!)
 // FIXME: change type of paramter in product function to double for double precision!
@@ -11,13 +11,13 @@ using namespace std;
 
 // function prototypes
 void product(float, float, float &);
-void test(void);
+void test_product(void);
 
 const double tolerance = 1e-1;
 
 int main() {
   // call test function
-  test();
+  test_product();
   // FIXME: make the program useable by any user...
   return 0;
 }
@@ -29,7 +29,7 @@ void product(float n1, float n2, float &result) {
   // no return!
 }
 
-void test(void) {
+void test_product(void) {
   float answer;
   float num1, num2;
   num1 = 10.0;

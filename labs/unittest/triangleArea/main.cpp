@@ -11,7 +11,7 @@ Algorithm:
 		1. Read height and base of a right triangle
 		2. Define a function to find and return area given height and base of a right triangle
       2.a Area is given by the equation: (Base * Height)/2
-    3. Call the function to print the result
+    3. Call the function to find and print the result
     4. Write a test function to test the area function implemented in step 2
 */
 
@@ -27,7 +27,7 @@ float areaOfTriangle(const unsigned height, const unsigned base);
 // function to test area function
 void testArea();
 
-#define MAX_ERROR 1e-7 // 10^-7 or 0.0000007
+#define MAX_ERROR 1e-7 // 10^-7 or 0.0000001
 
 int main()
 {
