@@ -5,13 +5,13 @@ CXX = g++
 # -Wall: turns on most, but not  all, compiler warnings
 # -std=c++17: uses c++17 standard
 # put all the required flags separated by space
-CXXFLAGS = -c -g -Wall -std=c++17
+CXXFLAGS = -c -g -Wall -std=gnu++17
 
 # the build target executable file; .exe is not required
-PROGRAM = #FIXME1
+PROGRAM = foxsays.exe #FIXME
 
 # list .cpp files separated by space
-CPPFILES = #FIXME2
+CPPFILES = main.cpp #FIXME
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
@@ -28,10 +28,10 @@ clean:
 # FIXME3 - add rule to run unittest functions
 
 # FIXME4 - add 4 more commands to test the 4 input files
-test:
+kattis:
 	cat 1.in | ./$(PROGRAM) | diff - 1.ans
 	@#FIXME - Add commands to test 4 more input files
-	@echo "All test cases passed!"
+	@echo "All kattis test cases passed!"
 
 all: build test clean
 	@echo "All done!"
